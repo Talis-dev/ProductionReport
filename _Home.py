@@ -102,9 +102,7 @@ if not st.session_state["df_completo"].empty:
                     color=alt.Color("SENSOR_NOME:N", title="Sensor"),
                 )
             )
-
             pontos = linhas.transform_filter(hover).mark_circle(size=65)
-
             tooltips = (
                 alt.Chart(df_filtrado)
                 .mark_rule()
